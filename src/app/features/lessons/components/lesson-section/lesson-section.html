@@ -7,10 +7,10 @@
   </mat-card-header>
 
   <mat-card-content>
-    <p>{{ section.section_title }}</p>
-
     @if (section.examples) {
     <app-example-table [examples]="section.examples" />
+    } @if(section.info) {
+    <app-section-info [info]="section.info"></app-section-info>
     }
   </mat-card-content>
 

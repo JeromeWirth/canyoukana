@@ -3,10 +3,11 @@ import { Section } from '../../../../models';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { ExampleTable } from '../example-table/example-table';
+import { SectionInfo } from '../section-info/section-info';
 
 @Component({
   selector: 'app-lesson-section',
-  imports: [MatCardModule, MatIconModule, ExampleTable],
+  imports: [MatCardModule, MatIconModule, ExampleTable, SectionInfo],
   templateUrl: './lesson-section.html',
   styleUrl: './lesson-section.scss',
 })

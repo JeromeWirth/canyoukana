@@ -1,0 +1,43 @@
+@use "../../../../styles/variables" as *;
+
+.info-box {
+  background-color: #fff8e1;
+  border-left: 4px solid #ffd54f;
+  border-radius: 4px;
+  margin: $spacing-md 0;
+  padding: $spacing-md;
+
+  .info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-sm;
+
+    .emoji {
+      font-size: 1.2rem;
+      margin-right: $spacing-sm;
+    }
+
+    .label {
+      font-weight: 500;
+      color: #f57f17;
+    }
+  }
+
+  .info-content {
+    margin-left: calc(1.2rem + #{$spacing-sm});
+
+    .info-text {
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 1.6;
+      margin-bottom: $spacing-md;
+    }
+
+    .info-examples {
+      margin-top: $spacing-md;
+
+      ::ng-deep .example-table {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}

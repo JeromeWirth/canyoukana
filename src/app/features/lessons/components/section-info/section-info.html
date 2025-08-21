@@ -1,0 +1,14 @@
+<div class="info-box">
+  <div class="info-header">
+    <span class="emoji">💡</span>
+    <span class="label">Additional Information</span>
+  </div>
+  <div class="info-content">
+    <p class="info-text">{{ info.info_text }}</p>
+    @if (info.examples.length > 0) {
+    <div class="info-examples">
+      <app-example-table [examples]="info.examples" />
+    </div>
+    }
+  </div>
+</div>

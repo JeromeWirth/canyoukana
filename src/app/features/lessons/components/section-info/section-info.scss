@@ -1,43 +1,90 @@
 @use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
 
 .info-box {
-  background-color: #fff8e1;
-  border-left: 4px solid #ffd54f;
-  border-radius: 4px;
-  margin: $spacing-md 0;
-  padding: $spacing-md;
+  @include glass-morphism;
+  background-color: $background-elevated;
+  border-left: 4px solid $primary;
+  border-radius: $card-radius-md;
+  margin: $spacing-lg 0;
+  box-shadow: $card-shadow-sm;
 
   .info-header {
     display: flex;
     align-items: center;
-    margin-bottom: $spacing-sm;
+    padding: $spacing-md;
+    border-bottom: 1px solid $neutral-300;
+    background: rgba($primary, 0.05);
 
     .emoji {
-      font-size: 1.2rem;
+      font-size: $font-size-xl;
       margin-right: $spacing-sm;
+      animation: glow 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 4px rgba($primary, 0.3));
     }
 
     .label {
-      font-weight: 500;
-      color: #f57f17;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: $primary-light;
+      text-shadow: 0 0 20px rgba($primary, 0.3);
     }
   }
 
   .info-content {
-    margin-left: calc(1.2rem + #{$spacing-sm});
+    padding: $spacing-md;
 
     .info-text {
-      color: rgba(0, 0, 0, 0.87);
-      line-height: 1.6;
+      @include body-text;
+      color: $text-secondary;
       margin-bottom: $spacing-md;
+      line-height: $line-height-relaxed;
     }
 
     .info-examples {
-      margin-top: $spacing-md;
+      margin-top: $spacing-lg;
 
       ::ng-deep .example-table {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba($neutral-200, 0.3);
+        backdrop-filter: blur(8px);
       }
+    }
+  }
+
+  &:hover {
+    box-shadow: $card-shadow-md;
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba($primary, 0.3));
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba($primary, 0.5));
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .info-box {
+    margin: $spacing-md 0;
+
+    .info-header {
+      padding: $spacing-sm;
+
+      .label {
+        font-size: $font-size-base;
+      }
+    }
+
+    .info-content {
+      padding: $spacing-sm;
     }
   }
 }

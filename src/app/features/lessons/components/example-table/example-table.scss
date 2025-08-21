@@ -4,37 +4,125 @@
 .example-table {
   width: 100%;
   margin: $spacing-md 0;
+  @include glass-morphism;
+  background-color: $background-elevated;
+  border: 1px solid $neutral-300;
+  border-radius: $card-radius-md;
+  overflow: hidden;
 
-  .mat-column-japanese {
-    font-size: 1.2em;
-    width: 30%;
+  // Custom styling for Material table
+  ::ng-deep {
+    .mat-mdc-header-row {
+      background-color: rgba($primary, 0.1);
+      border-bottom: 1px solid $neutral-300;
+    }
+
+    .mat-mdc-header-cell {
+      color: $primary-light;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-sm;
+      padding: $spacing-md;
+      letter-spacing: 0.5px;
+    }
+
+    .mat-mdc-row {
+      @include smooth-transition;
+      border-bottom: 1px solid rgba($neutral-300, 0.3);
+
+      &:hover {
+        background-color: rgba($primary, 0.05);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .mat-mdc-cell {
+      padding: $spacing-md;
+      font-size: $font-size-base;
+      line-height: $line-height-relaxed;
+      color: $text-primary;
+    }
+
+    // Column-specific styles
+    .mat-column-kanji {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
+      width: 20%;
+      color: $primary-light;
+    }
+
+    .mat-column-kana {
+      font-size: $font-size-lg;
+      width: 25%;
+      color: $text-primary;
+    }
+
+    .mat-column-romaji {
+      color: $text-secondary;
+      font-style: italic;
+      width: 25%;
+    }
+
+    .mat-column-english {
+      color: $text-secondary;
+      width: 30%;
+    }
   }
 
-  .mat-column-reading {
-    width: 30%;
-    color: $text-secondary;
+  &:hover {
+    box-shadow: $card-shadow-sm;
   }
+}
 
-  .mat-column-meaning {
-    width: 40%;
-  }
+// Responsive adjustments
+@media (max-width: $breakpoint-md) {
+  .example-table {
+    ::ng-deep {
+      .mat-mdc-header-cell,
+      .mat-mdc-cell {
+        padding: $spacing-sm;
+        font-size: $font-size-sm;
+      }
 
-  th.mat-header-cell {
-    font-weight: 500;
-    color: $text-primary;
-  }
-
-  td.mat-cell {
-    padding: $spacing-sm 0;
+      .mat-column-kanji,
+      .mat-column-kana {
+        font-size: $font-size-base;
+      }
+    }
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .example-table {
-    .mat-column-japanese,
-    .mat-column-reading,
-    .mat-column-meaning {
-      width: auto;
+    margin: $spacing-sm 0;
+    font-size: $font-size-xs;
+
+    ::ng-deep {
+      // Stack cells vertically on mobile
+      .mat-mdc-row {
+        display: flex;
+        flex-direction: column;
+        padding: $spacing-sm;
+        border-bottom: 1px solid $neutral-200;
+      }
+
+      .mat-mdc-header-row {
+        display: none; // Hide headers on mobile
+      }
+
+      .mat-mdc-cell {
+        display: flex;
+        padding: $spacing-xs;
+
+        &::before {
+          content: attr(data-label);
+          font-weight: $font-weight-semibold;
+          width: 80px;
+          min-width: 80px;
+        }
+      }
     }
   }
 }

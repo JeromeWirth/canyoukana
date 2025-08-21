@@ -13,4 +13,11 @@ export class ExampleTable {
   @Input({ required: true }) examples: Example[] = [];
 
   displayedColumns: string[] = ['kanji', 'kana', 'romaji', 'english'];
+
+  ngAfterViewInit() {
+    // Add data-label attributes for mobile view
+    const cells = document.querySelectorAll('.mat-column-kanji');
+    cells.forEach((cell) => cell.setAttribute('data-label', '漢字'));
+    // Repeat for other columns...
+  }
 }

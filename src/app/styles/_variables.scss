@@ -1,22 +1,103 @@
-// Colors
-$primary: #2196f3;
-$secondary: #ff4081;
-$text-primary: rgba(0, 0, 0, 0.87);
-$text-secondary: rgba(0, 0, 0, 0.54);
-$background: #ffffff;
+// Color System
+// Main colors
+$primary: #5865f2; // Discord-style bright blue
+$primary-light: #7984f5; // Lighter variation
+$primary-dark: #454fbf; // Darker variation
+$secondary: #eb459e; // Vibrant pink
+$accent: #fee75c; // Bright yellow accent
 
-// Spacing
+// Neutral colors (dark theme)
+$neutral-50: #1a1b1e; // Darkest - Main background
+$neutral-100: #2b2d31; // Dark surface - Sidebars
+$neutral-200: #313338; // Subtle surface variations - Cards
+$neutral-300: #383a40; // Borders
+$neutral-400: #4e5058; // Subtle text/icons
+$neutral-500: #6d6f78; // Muted text
+$neutral-600: #949ba4; // Default text
+$neutral-700: #b5bac1; // High-contrast text
+$neutral-800: #d4d7dc; // Bright text
+$neutral-900: #f2f3f5; // Brightest text
+
+// Text colors
+$text-primary: $neutral-800;
+$text-secondary: $neutral-600;
+$text-disabled: $neutral-500;
+
+// Background colors
+$background-primary: $neutral-50; // Main app background
+$background-secondary: $neutral-100; // Sidebars/Nav
+$background-elevated: $neutral-200; // Cards/Modals
+
+// Semantic colors
+$success: #23a559; // Green
+$warning: #f0b132; // Orange
+$error: #f23f42; // Red
+$info: #5865f2; // Blue
+
+// Shadows for dark theme
+$card-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+$card-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+$card-shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.5);
+
+// Glass effect colors
+$glass-background: rgba($neutral-200, 0.85);
+$glass-border: rgba($neutral-300, 0.5);
+
+// Spacing System
 $spacing-unit: 8px;
-$spacing-xs: $spacing-unit;
-$spacing-sm: $spacing-unit * 2;
-$spacing-md: $spacing-unit * 3;
-$spacing-lg: $spacing-unit * 4;
+$spacing-xs: $spacing-unit; // 8px
+$spacing-sm: $spacing-unit * 2; // 16px
+$spacing-md: $spacing-unit * 3; // 24px
+$spacing-lg: $spacing-unit * 4; // 32px
+$spacing-xl: $spacing-unit * 6; // 48px
+$spacing-xxl: $spacing-unit * 8; // 64px
+
+// Typography
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 2rem; // 32px
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
 
 // Breakpoints
-$breakpoint-sm: 600px;
-$breakpoint-md: 960px;
-$breakpoint-lg: 1280px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
 
-// Card
-$card-radius: 8px;
-$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// Elements
+// Cards
+$card-radius-sm: 8px;
+$card-radius-md: 12px;
+$card-radius-lg: 16px;
+$card-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+$card-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Transitions
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-modal: 1030;
+$z-index-popover: 1040;
+$z-index-tooltip: 1050;

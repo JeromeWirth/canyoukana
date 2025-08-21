@@ -2,15 +2,96 @@
 @use "../../../../styles/mixins" as *;
 
 .lesson-detail {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: $spacing-md;
+  @include responsive-container;
+  padding: $spacing-lg $spacing-md;
+  color: $text-primary;
+
+  .lesson-header {
+    margin-bottom: $spacing-xl;
+    background-color: $background-elevated;
+    padding: $spacing-lg;
+    border-radius: $card-radius-md;
+    border: 1px solid $neutral-300;
+
+    .lesson-title {
+      @include heading-1;
+      color: $primary-light;
+      margin-bottom: $spacing-md;
+      font-size: $font-size-3xl;
+    }
+
+    mat-progress-bar {
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      ::ng-deep {
+        .mat-mdc-progress-bar {
+          background-color: $neutral-300;
+        }
+
+        .mat-mdc-progress-bar-fill::after {
+          background-color: $primary;
+        }
+
+        .mat-mdc-progress-bar-buffer {
+          background-color: $neutral-200;
+        }
+      }
+    }
+  }
+
+  .lesson-content {
+    margin-bottom: $spacing-xl;
+  }
+
+  .lesson-completion {
+    @include glass-morphism;
+    background-color: $background-elevated;
+    border: 1px solid $neutral-300;
+    max-width: 600px;
+    margin: $spacing-xl auto;
+    border-radius: $card-radius-lg;
+    padding: $spacing-lg;
+    text-align: center;
+
+    h2 {
+      color: $success;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      @include body-text;
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+    }
+
+    button {
+      @include modern-button;
+      @include smooth-transition;
+      background-color: $primary;
+      color: $neutral-900;
+
+      &:hover {
+        background-color: $primary-light;
+      }
+    }
+  }
 }
 
-.lesson-header {
-  margin-bottom: $spacing-lg;
+// Responsive adjustments
+@media (max-width: $breakpoint-sm) {
+  .lesson-detail {
+    padding: $spacing-md $spacing-sm;
 
-  h1 {
-    margin-bottom: $spacing-sm;
+    .lesson-header {
+      margin-bottom: $spacing-lg;
+
+      .lesson-title {
+        font-size: $font-size-2xl;
+      }
+    }
   }
 }

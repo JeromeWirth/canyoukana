@@ -1,17 +1,96 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-sticky;
+  height: 32px; // Increased height for better visibility
+}
+
 .navbar {
+  @include glass-morphism;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  background: #f0f0f0;
+  align-items: center;
+  padding: $spacing-md $spacing-lg;
+  height: 100%;
+  background-color: rgba($background-secondary, 0.95);
+  border-bottom: 1px solid $neutral-300;
+  box-shadow: 0 2px 8px rgba($neutral-50, 0.2);
+
+  .logo {
+    background: linear-gradient(135deg, $primary-light, $primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        lighten($primary-light, 10%),
+        lighten($primary, 10%)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: $spacing-md;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        @include smooth-transition;
+        display: inline-block;
+        padding: $spacing-sm $spacing-md;
+        color: $text-secondary;
+        text-decoration: none;
+        font-weight: $font-weight-medium;
+        border-radius: $card-radius-sm;
+        border: 1px solid transparent;
+
+        &:hover {
+          color: $text-primary;
+          background: rgba($primary, 0.1);
+          border-color: rgba($primary, 0.2);
+        }
+
+        &.active {
+          color: $primary-light;
+          background: rgba($primary, 0.15);
+          border-color: rgba($primary, 0.3);
+        }
+      }
+    }
+  }
 }
-.logo {
-  font-weight: bold;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-.active {
-  font-weight: bold;
+
+@media (max-width: $breakpoint-sm) {
+  .navbar {
+    padding: $spacing-sm;
+
+    .logo {
+      font-size: $font-size-lg;
+    }
+
+    .nav-links {
+      gap: $spacing-xs;
+
+      li a {
+        padding: $spacing-xs $spacing-sm;
+        font-size: $font-size-sm;
+      }
+    }
+  }
 }

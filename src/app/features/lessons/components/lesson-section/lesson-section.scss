@@ -2,6 +2,11 @@
 @use "../../../../styles/mixins" as *;
 
 .section-card {
+  @include glass-morphism;
+  @include smooth-transition;
+  background-color: $background-elevated; // Card background
+  border: 1px solid $neutral-300;
+  border-radius: $card-radius-md;
   margin-bottom: $spacing-md;
 
   mat-card-header {
@@ -9,26 +14,40 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: $spacing-md;
+    border-bottom: 1px solid $neutral-300;
+    padding: $spacing-md;
+
+    mat-card-title {
+      @include heading-1;
+      color: $text-primary;
+      font-size: $font-size-xl;
+    }
+
+    mat-icon {
+      color: $success; // Green check for completed sections
+    }
   }
 
   mat-card-content {
-    p {
-      margin-bottom: $spacing-md;
-      line-height: 1.6;
+    @include body-text;
+    color: $text-secondary;
+    padding: 0 $spacing-md $spacing-md;
+  }
+
+  mat-card-actions {
+    margin-top: $spacing-md;
+    padding: $spacing-md;
+    border-top: 1px solid $neutral-300;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background-color: transparent;
+      color: $primary;
+
+      &:hover {
+        background-color: rgba($primary, 0.1);
+      }
     }
-  }
-}
-
-.lesson-completion {
-  margin-top: $spacing-lg;
-  text-align: center;
-
-  h2 {
-    color: $primary;
-    margin-bottom: $spacing-sm;
-  }
-
-  p {
-    margin-bottom: $spacing-md;
   }
 }

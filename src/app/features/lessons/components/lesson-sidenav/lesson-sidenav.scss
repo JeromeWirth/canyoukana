@@ -1,30 +1,95 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+:host {
+  display: block;
+  height: 100%;
+  background-color: $background-secondary;
+}
+
+mat-nav-list {
+  padding: $spacing-sm 0;
+
+  h3[matSubheader] {
+    color: $text-primary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    padding: $spacing-md $spacing-lg;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  a.mat-list-item {
+    @include smooth-transition;
+    margin: $spacing-xs $spacing-sm;
+    border-radius: $card-radius-sm;
+    border: 1px solid transparent;
+
+    &:hover {
+      background: rgba($primary, 0.1);
+      border-color: rgba($primary, 0.2);
+    }
+
+    &.active-lesson {
+      background: rgba($primary, 0.15);
+      border-color: rgba($primary, 0.3);
+
+      .lesson-title {
+        color: $primary-light;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
+
 .lesson-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
+  padding: $spacing-xs $spacing-sm;
 
-.lesson-title {
-  font-weight: 500;
-}
-
-.lesson-difficulty {
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  align-self: flex-start;
-
-  &.beginner {
-    background-color: #e8f5e9;
-    color: #2e7d32;
+  .lesson-title {
+    color: $text-secondary;
+    font-size: $font-size-base;
+    line-height: $line-height-normal;
   }
 
-  &.intermediate {
-    background-color: #fff3e0;
-    color: #ef6c00;
+  .lesson-difficulty {
+    font-size: $font-size-xs;
+    padding: 2px $spacing-xs;
+    border-radius: 12px;
+    align-self: flex-start;
+    margin-top: $spacing-xs;
+
+    &.beginner {
+      background-color: rgba($success, 0.15);
+      color: lighten($success, 15%);
+    }
+
+    &.intermediate {
+      background-color: rgba($warning, 0.15);
+      color: lighten($warning, 15%);
+    }
+
+    &.advanced {
+      background-color: rgba($error, 0.15);
+      color: lighten($error, 15%);
+    }
   }
 }
 
-.active-lesson {
-  background: rgba(0, 0, 0, 0.04);
+@media (max-width: $breakpoint-sm) {
+  mat-nav-list {
+    h3[matSubheader] {
+      font-size: $font-size-base;
+      padding: $spacing-sm;
+    }
+
+    a.mat-list-item {
+      margin: $spacing-xs;
+    }
+  }
+
+  .lesson-item {
+    padding: $spacing-xs;
+  }
 }

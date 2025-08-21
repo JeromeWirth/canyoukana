@@ -2,35 +2,44 @@
 @use "../../../../styles/mixins" as *;
 
 .welcome-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $spacing-lg;
+  @include responsive-container;
+  padding: $spacing-xl $spacing-md;
 }
 
 .welcome-header {
   text-align: center;
-  margin-bottom: $spacing-xl;
+  margin-bottom: $spacing-xxl;
 
   h1 {
-    font-size: 2.5rem;
-    color: $text-primary;
-    margin-bottom: $spacing-sm;
+    @include heading-1;
+    @include gradient-text;
+    margin-bottom: $spacing-md;
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: $font-size-xl;
     color: $text-secondary;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: $line-height-relaxed;
   }
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: $spacing-lg;
-  margin-bottom: $spacing-xl;
+  @include responsive-grid(320px, $spacing-lg);
+  margin-bottom: $spacing-xxl;
 
   .feature-card {
+    @include glass-morphism;
+    @include smooth-transition;
+    border-radius: $card-radius-lg;
+    padding: $spacing-lg;
     height: 100%;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $card-shadow-lg;
+    }
 
     mat-card-header {
       margin-bottom: $spacing-md;
@@ -41,12 +50,18 @@
         width: 2rem;
         margin-right: $spacing-md;
       }
+
+      mat-card-title {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+      }
     }
 
     mat-card-content {
       p {
         color: $text-secondary;
-        line-height: 1.6;
+        line-height: $line-height-relaxed;
       }
     }
   }
@@ -55,36 +70,63 @@
 .get-started {
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
 
-  h2 {
-    color: $primary;
-    margin-bottom: $spacing-md;
-  }
+  mat-card {
+    @include glass-morphism;
+    border-radius: $card-radius-lg;
+    padding: $spacing-xl;
+    text-align: center;
 
-  .tip {
-    font-style: italic;
-    color: $text-secondary;
-    margin: $spacing-md 0;
-  }
+    h2 {
+      @include gradient-text;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+    }
 
-  button {
-    margin-top: $spacing-md;
+    p {
+      color: $text-secondary;
+      line-height: $line-height-relaxed;
+      margin-bottom: $spacing-md;
+
+      &.tip {
+        font-style: italic;
+        font-size: $font-size-sm;
+        color: $primary;
+        margin: $spacing-md 0;
+      }
+    }
+
+    button {
+      @include modern-button;
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-size-lg;
+    }
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .welcome-container {
-    padding: $spacing-md;
+    padding: $spacing-lg $spacing-sm;
   }
 
   .welcome-header {
+    margin-bottom: $spacing-xl;
+
     h1 {
-      font-size: 2rem;
+      font-size: $font-size-3xl;
+    }
+
+    .subtitle {
+      font-size: $font-size-lg;
     }
   }
 
   .features-grid {
-    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+
+  .get-started mat-card {
+    padding: $spacing-lg;
   }
 }

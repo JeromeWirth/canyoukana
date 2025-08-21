@@ -1,6 +1,6 @@
 <div class="lesson-detail">
   <header class="lesson-header">
-    <h1>{{ lesson.title }}</h1>
+    <div class="lesson-title">{{ lesson.title }}</div>
     <mat-progress-bar
       mode="determinate"
       [value]="(completedSections.size / lesson.content.length) * 100"

@@ -12,6 +12,11 @@ export const routes: Routes = [
   },
 
   {
+    path: 'lessons/:id',
+    component: Lesson,
+  },
+
+  {
     path: 'kana',
     component: Hiragana,
   },

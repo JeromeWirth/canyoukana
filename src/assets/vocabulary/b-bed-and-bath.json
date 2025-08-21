@@ -1,0 +1,88 @@
+{
+  "id": 5,
+  "title": "Vocabulary Group B – Bed & Bath",
+  "description": "Learn basic Japanese vocabulary related to bed and bath items.",
+  "objectives": [
+    "Memorize key bed and bath terms in Romaji, Kana, Kanji, and English",
+    "Practice pronunciation and recognition of everyday items"
+  ],
+  "content": [
+    {
+      "section": "Bed & Bath Vocabulary Table",
+      "text": "Key vocabulary for bed and bath items with Romaji, Kana, Kanji, and English translations.",
+      "examples": [
+        {
+          "romaji": "makura",
+          "kana": "まくら",
+          "kanji": "枕",
+          "english": "pillow"
+        },
+        {
+          "romaji": "beddo",
+          "kana": "ベッド",
+          "kanji": "—",
+          "english": "bed"
+        },
+        {
+          "romaji": "futon",
+          "kana": "ふとん",
+          "kanji": "布団",
+          "english": "futon"
+        },
+        {
+          "romaji": "moufu",
+          "kana": "もうふ",
+          "kanji": "毛布",
+          "english": "blanket"
+        },
+        {
+          "romaji": "taoru",
+          "kana": "タオル",
+          "kanji": "—",
+          "english": "towel"
+        },
+        {
+          "romaji": "ofuro",
+          "kana": "おふろ",
+          "kanji": "お風呂",
+          "english": "bath"
+        },
+        {
+          "romaji": "sekken",
+          "kana": "せっけん",
+          "kanji": "石鹸",
+          "english": "soap"
+        },
+        {
+          "romaji": "haburashi",
+          "kana": "はぶらし",
+          "kanji": "歯ブラシ",
+          "english": "toothbrush"
+        },
+        {
+          "romaji": "kagami",
+          "kana": "かがみ",
+          "kanji": "鏡",
+          "english": "mirror"
+        },
+        {
+          "romaji": "mado",
+          "kana": "まど",
+          "kanji": "窓",
+          "english": "window"
+        }
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "type": "quiz",
+      "items": 10
+    },
+    {
+      "type": "flashcard",
+      "items": 10
+    }
+  ],
+  "completed": false
+}

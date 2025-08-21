@@ -1,0 +1,282 @@
+{
+  "id": 2,
+  "title": "Lesson 2 – Numbers",
+  "description": "Learn Japanese numbers, focusing on essentials and irregularities.",
+  "objectives": [
+    "Master basic numbers (0–10)",
+    "Understand patterns for 11–99",
+    "Learn irregular readings for hundreds and thousands",
+    "Note cultural pronunciation preferences"
+  ],
+  "lesson_completed": false,
+  "content": [
+    {
+      "section_title": "Single Digit Numbers (0-9)",
+      "section_description": "Basic numbers from 0 to 9, including alternatives and irregularities.",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "rei / zero",
+          "kana": "れい / ゼロ",
+          "kanji": "零",
+          "english": "0"
+        },
+        {
+          "romaji": "maru (circle)",
+          "kana": "まる",
+          "kanji": "丸",
+          "english": "zero / circle"
+        },
+        {
+          "romaji": "ichi",
+          "kana": "いち",
+          "kanji": "一",
+          "english": "1"
+        },
+        {
+          "romaji": "ni",
+          "kana": "に",
+          "kanji": "二",
+          "english": "2"
+        },
+        {
+          "romaji": "san",
+          "kana": "さん",
+          "kanji": "三",
+          "english": "3"
+        },
+        {
+          "romaji": "shi / yon",
+          "kana": "し / よん",
+          "kanji": "四",
+          "english": "4"
+        },
+        {
+          "romaji": "go",
+          "kana": "ご",
+          "kanji": "五",
+          "english": "5"
+        },
+        {
+          "romaji": "roku",
+          "kana": "ろく",
+          "kanji": "六",
+          "english": "6"
+        },
+        {
+          "romaji": "shichi / nana",
+          "kana": "しち / なな",
+          "kanji": "七",
+          "english": "7"
+        },
+        {
+          "romaji": "hachi",
+          "kana": "はち",
+          "kanji": "八",
+          "english": "8"
+        },
+        {
+          "romaji": "ku / kyuu",
+          "kana": "く / きゅう",
+          "kanji": "九",
+          "english": "9"
+        }
+      ],
+      "info": {
+        "info_text": "Avoid certain pronunciations due to superstitions.",
+        "examples": [
+          {
+            "romaji": "shi (4)",
+            "kana": "し",
+            "kanji": "四",
+            "english": "Sounds like death; prefer yon"
+          },
+          {
+            "romaji": "ku (9)",
+            "kana": "く",
+            "kanji": "九",
+            "english": "Sounds like suffering; prefer kyuu"
+          }
+        ]
+      }
+    },
+    {
+      "section_title": "Teens (10-19)",
+      "section_description": "Numbers from 10 to 19, showing the 十 + number pattern.",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "juu",
+          "kana": "じゅう",
+          "kanji": "十",
+          "english": "10"
+        },
+        {
+          "romaji": "juu ichi",
+          "kana": "じゅういち",
+          "kanji": "十一",
+          "english": "11"
+        },
+        {
+          "romaji": "juu ni",
+          "kana": "じゅうに",
+          "kanji": "十二",
+          "english": "12"
+        },
+        {
+          "romaji": "juu san",
+          "kana": "じゅうさん",
+          "kanji": "十三",
+          "english": "13"
+        },
+        {
+          "romaji": "juu yon",
+          "kana": "じゅうよん",
+          "kanji": "十四",
+          "english": "14"
+        },
+        {
+          "romaji": "juu go",
+          "kana": "じゅうご",
+          "kanji": "十五",
+          "english": "15"
+        },
+        {
+          "romaji": "juu roku",
+          "kana": "じゅうろく",
+          "kanji": "十六",
+          "english": "16"
+        },
+        {
+          "romaji": "juu nana",
+          "kana": "じゅうなな",
+          "kanji": "十七",
+          "english": "17"
+        },
+        {
+          "romaji": "juu hachi",
+          "kana": "じゅうはち",
+          "kanji": "十八",
+          "english": "18"
+        },
+        {
+          "romaji": "juu kyuu",
+          "kana": "じゅうきゅう",
+          "kanji": "十九",
+          "english": "19"
+        }
+      ]
+    },
+    {
+      "section_title": "Multiples of 10 (20-90)",
+      "section_description": "Multiples of 10, showing the number + 十 pattern.",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "ni juu",
+          "kana": "にじゅう",
+          "kanji": "二十",
+          "english": "20"
+        },
+        {
+          "romaji": "san juu",
+          "kana": "さんじゅう",
+          "kanji": "三十",
+          "english": "30"
+        },
+        {
+          "romaji": "yon juu",
+          "kana": "よんじゅう",
+          "kanji": "四十",
+          "english": "40"
+        },
+        {
+          "romaji": "go juu",
+          "kana": "ごじゅう",
+          "kanji": "五十",
+          "english": "50"
+        },
+        {
+          "romaji": "roku juu",
+          "kana": "ろくじゅう",
+          "kanji": "六十",
+          "english": "60"
+        },
+        {
+          "romaji": "nana juu",
+          "kana": "ななじゅう",
+          "kanji": "七十",
+          "english": "70"
+        },
+        {
+          "romaji": "hachi juu",
+          "kana": "はちじゅう",
+          "kanji": "八十",
+          "english": "80"
+        },
+        {
+          "romaji": "kyuu juu",
+          "kana": "きゅうじゅう",
+          "kanji": "九十",
+          "english": "90"
+        }
+      ]
+    },
+    {
+      "section_title": "Hundreds and Irregulars",
+      "section_description": "Hundreds with irregular readings highlighted.",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "hyaku",
+          "kana": "ひゃく",
+          "kanji": "百",
+          "english": "100"
+        },
+        {
+          "romaji": "sanbyaku",
+          "kana": "さんびゃく",
+          "kanji": "三百",
+          "english": "300 (irregular)"
+        },
+        {
+          "romaji": "roppyaku",
+          "kana": "ろっぴゃく",
+          "kanji": "六百",
+          "english": "600 (irregular)"
+        },
+        {
+          "romaji": "happyaku",
+          "kana": "はっぴゃく",
+          "kanji": "八百",
+          "english": "800 (irregular)"
+        }
+      ]
+    },
+    {
+      "section_title": "Thousands and Irregulars",
+      "section_description": "Thousands with irregular readings highlighted.",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "sen / issen",
+          "kana": "せん / いっせん",
+          "kanji": "千",
+          "english": "1000"
+        },
+        {
+          "romaji": "san zen",
+          "kana": "さんぜん",
+          "kanji": "三千",
+          "english": "3000 (irregular)"
+        },
+        {
+          "romaji": "hassen",
+          "kana": "はっせん",
+          "kanji": "八千",
+          "english": "8000 (irregular)"
+        }
+      ]
+    }
+  ]
+}

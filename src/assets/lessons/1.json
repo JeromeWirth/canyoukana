@@ -1,0 +1,124 @@
+{
+  "id": 1,
+  "title": "Lesson 1: Basic Conversation",
+  "description": "Learn basic phrases for first meetings and introductions and basic greetings for different times of day and phrases for coming and going in Japanese.",
+  "objectives": [
+    "Master formal and casual greetings",
+    "Understand phrases for departures and returns",
+    "Practice polite expressions in daily interactions"
+  ],
+  "lesson_completed": false,
+  "content": [
+    {
+      "section_title": "First Meeting Phrases",
+      "section_description": "",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "hajimemashite",
+          "kana": "はじめまして",
+          "kanji": "初めまして",
+          "english": "Nice to meet you / How do you do?"
+        },
+        {
+          "romaji": "<[ NAME ] to moushimasu",
+          "kana": "[ NAME ] ともうします",
+          "kanji": "申します",
+          "english": "I am [ NAME ] (formal)"
+        },
+        {
+          "romaji": "yoroshiku onegai shimasu",
+          "kana": "よろしくおねがいします",
+          "kanji": "宜しくお願いします",
+          "english": "Best regards / Please treat me well"
+        }
+      ]
+    },
+    {
+      "section_title": "Daily greetings",
+      "section_description": "",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "ohayou gozaimasu",
+          "kana": "おはようございます",
+          "kanji": "お早うございます",
+          "english": "Good morning (formal)"
+        },
+        {
+          "romaji": "ohayou",
+          "kana": "おはよう",
+          "kanji": "お早う",
+          "english": "Good morning (casual)"
+        },
+        {
+          "romaji": "konnichiwa",
+          "kana": "こんにちは",
+          "kanji": "今日は",
+          "english": "Good afternoon"
+        },
+        {
+          "romaji": "konbanwa",
+          "kana": "こんばんは",
+          "kanji": "今晩は",
+          "english": "Good evening"
+        },
+        {
+          "romaji": "oyasuminasai",
+          "kana": "おやすみなさい",
+          "kanji": "お休みなさい",
+          "english": "Good night (formal)"
+        },
+        {
+          "romaji": "oyasumi",
+          "kana": "おやすみ",
+          "kanji": "お休み",
+          "english": "Good night (casual)"
+        },
+        {
+          "romaji": "arigatou gozaimasu",
+          "kana": "ありがとうございます",
+          "kanji": "有難うございます",
+          "english": "Thank you (formal)"
+        },
+        {
+          "romaji": "arigatou",
+          "kana": "ありがとう",
+          "kanji": "有難う",
+          "english": "Thank you (casual)"
+        }
+      ]
+    },
+    {
+      "section_title": "Leaving and returning home",
+      "section_description": "",
+      "section_completed": false,
+      "examples": [
+        {
+          "romaji": "itte kimasu",
+          "kana": "いってきます",
+          "kanji": "行ってきます",
+          "english": "I’ll go and come back"
+        },
+        {
+          "romaji": "itterasshai",
+          "kana": "いってらっしゃい",
+          "kanji": "行ってらっしゃい",
+          "english": "Take care / see you soon"
+        },
+        {
+          "romaji": "tadaima",
+          "kana": "ただいま",
+          "kanji": "只今 / ただいま",
+          "english": "I’m home / I’m back"
+        },
+        {
+          "romaji": "okaerinasai",
+          "kana": "おかえりなさい",
+          "kanji": "お帰りなさい",
+          "english": "Welcome home"
+        }
+      ]
+    }
+  ]
+}

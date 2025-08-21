@@ -1,17 +1,19 @@
 <mat-nav-list>
   <h3 matSubheader>Lessons</h3>
 
+  @for(lesson of store.lessons(); track lesson.id) {
   <a
     mat-list-item
-    *ngFor="let lesson of lessons"
     [routerLink]="['/lessons', lesson.id]"
     routerLinkActive="active-lesson"
+    (click)="store.loadLesson(lesson.id)"
   >
     <div class="lesson-item">
       <span class="lesson-title">{{ lesson.title }}</span>
-      <span class="lesson-difficulty" [class]="lesson.difficulty.toLowerCase()">
-        {{ lesson.difficulty }}
-      </span>
+      <!-- <span class="lesson-difficulty" [class]="lesson.difficulty.toLowerCase()">
+          {{ lesson.difficulty }}
+        </span> -->
     </div>
   </a>
+  }
 </mat-nav-list>

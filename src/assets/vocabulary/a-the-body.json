@@ -1,0 +1,88 @@
+{
+  "id": 4,
+  "title": "Vocabulary Group A – The Body",
+  "description": "Learn basic Japanese vocabulary related to parts of the body.",
+  "objectives": [
+    "Memorize key body parts in Romaji, Kana, Kanji, and English",
+    "Practice pronunciation and recognition of common terms"
+  ],
+  "content": [
+    {
+      "section": "Body Parts Vocabulary Table",
+      "text": "Key vocabulary for parts of the body with Romaji, Kana, Kanji, and English translations.",
+      "examples": [
+        {
+          "romaji": "kuchi",
+          "kana": "くち",
+          "kanji": "口",
+          "english": "mouth"
+        },
+        {
+          "romaji": "me",
+          "kana": "め",
+          "kanji": "目",
+          "english": "eye"
+        },
+        {
+          "romaji": "mimi",
+          "kana": "みみ",
+          "kanji": "耳",
+          "english": "ear"
+        },
+        {
+          "romaji": "hana",
+          "kana": "はな",
+          "kanji": "鼻",
+          "english": "nose"
+        },
+        {
+          "romaji": "kao",
+          "kana": "かお",
+          "kanji": "顔",
+          "english": "face"
+        },
+        {
+          "romaji": "te",
+          "kana": "て",
+          "kanji": "手",
+          "english": "hand"
+        },
+        {
+          "romaji": "ashi",
+          "kana": "あし",
+          "kanji": "足",
+          "english": "leg / foot"
+        },
+        {
+          "romaji": "yubi",
+          "kana": "ゆび",
+          "kanji": "指",
+          "english": "finger"
+        },
+        {
+          "romaji": "atama",
+          "kana": "あたま",
+          "kanji": "頭",
+          "english": "head"
+        },
+        {
+          "romaji": "ha",
+          "kana": "は",
+          "kanji": "歯",
+          "english": "tooth"
+        }
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "type": "quiz",
+      "items": 10
+    },
+    {
+      "type": "flashcard",
+      "items": 10
+    }
+  ],
+  "completed": false
+}

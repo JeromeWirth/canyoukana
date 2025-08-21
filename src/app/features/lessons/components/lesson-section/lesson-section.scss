@@ -1,0 +1,34 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.section-card {
+  margin-bottom: $spacing-md;
+
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+  }
+
+  mat-card-content {
+    p {
+      margin-bottom: $spacing-md;
+      line-height: 1.6;
+    }
+  }
+}
+
+.lesson-completion {
+  margin-top: $spacing-lg;
+  text-align: center;
+
+  h2 {
+    color: $primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    margin-bottom: $spacing-md;
+  }
+}

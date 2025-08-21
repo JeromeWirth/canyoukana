@@ -8,6 +8,7 @@ export interface Lesson {
 }
 
 export interface Section {
+  id: string;
   section_title: string;
   section_description: string;
   section_completed: boolean;

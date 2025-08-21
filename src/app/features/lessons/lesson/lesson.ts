@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { LessonSidenav } from '../lesson-sidenav/lesson-sidenav';
+import { LessonSidenav } from '../components/lesson-sidenav/lesson-sidenav';
 import { LessonStore } from '../../../state/lesson.state';
+import { LessonWelcome } from '../components/lesson-welcome/lesson-welcome';
+import { LessonDetail } from '../components/lesson-detail/lesson-detail';
 
 @Component({
   selector: 'app-lesson',
-  imports: [MatSidenavModule, LessonSidenav],
+  imports: [MatSidenavModule, LessonSidenav, LessonWelcome, LessonDetail],
   templateUrl: './lesson.html',
   styleUrl: './lesson.scss',
 })

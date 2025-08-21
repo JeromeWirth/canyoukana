@@ -1,0 +1,35 @@
+<div class="welcome-container">
+  <header class="welcome-header">
+    <h1>Welcome to Japanese Lessons</h1>
+    <p class="subtitle">Start your journey to master Japanese language</p>
+  </header>
+
+  <div class="features-grid">
+    @for (feature of features; track feature.title) {
+    <mat-card class="feature-card">
+      <mat-card-header>
+        <mat-icon color="primary">{{ feature.icon }}</mat-icon>
+        <mat-card-title>{{ feature.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ feature.description }}</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+
+  <div class="get-started">
+    <mat-card>
+      <mat-card-content>
+        <h2>Ready to Begin?</h2>
+        <p>Select a lesson from the sidebar to start your learning journey.</p>
+        <p class="tip">
+          Tip: Start with Lesson 1 for the best learning experience!
+        </p>
+        <button mat-raised-button color="primary" routerLink="/lessons/1">
+          Start with Lesson 1
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

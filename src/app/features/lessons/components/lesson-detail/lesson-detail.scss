@@ -1,0 +1,16 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.lesson-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-md;
+}
+
+.lesson-header {
+  margin-bottom: $spacing-lg;
+
+  h1 {
+    margin-bottom: $spacing-sm;
+  }
+}

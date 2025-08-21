@@ -1,0 +1,22 @@
+// Colors
+$primary: #2196f3;
+$secondary: #ff4081;
+$text-primary: rgba(0, 0, 0, 0.87);
+$text-secondary: rgba(0, 0, 0, 0.54);
+$background: #ffffff;
+
+// Spacing
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit;
+$spacing-sm: $spacing-unit * 2;
+$spacing-md: $spacing-unit * 3;
+$spacing-lg: $spacing-unit * 4;
+
+// Breakpoints
+$breakpoint-sm: 600px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1280px;
+
+// Card
+$card-radius: 8px;
+$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

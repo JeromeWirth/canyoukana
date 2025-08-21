@@ -1,0 +1,13 @@
+@mixin card {
+  background: $background;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  padding: $spacing-md;
+}
+
+@mixin responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}

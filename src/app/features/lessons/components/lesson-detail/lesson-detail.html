@@ -1,0 +1,36 @@
+<div class="lesson-detail">
+  <header class="lesson-header">
+    <h1>{{ lesson.title }}</h1>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="(completedSections.size / lesson.content.length) * 100"
+    >
+    </mat-progress-bar>
+  </header>
+
+  <div class="lesson-content">
+    @for (section of lesson.content; track section.section_title) {
+
+    <app-lesson-section [section]="section"></app-lesson-section>
+
+    }
+  </div>
+
+  @if (isLessonCompleted()) {
+  <div class="lesson-completion">
+    <mat-card>
+      <mat-card-content>
+        <h2>Congratulations!</h2>
+        <p>You've completed this lesson. Ready for the next one?</p>
+        <button
+          mat-raised-button
+          color="primary"
+          routerLink="/lessons/{{ lesson.id + 1 }}"
+        >
+          Next Lesson
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  }
+</div>

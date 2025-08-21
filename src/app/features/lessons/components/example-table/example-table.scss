@@ -1,0 +1,40 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.example-table {
+  width: 100%;
+  margin: $spacing-md 0;
+
+  .mat-column-japanese {
+    font-size: 1.2em;
+    width: 30%;
+  }
+
+  .mat-column-reading {
+    width: 30%;
+    color: $text-secondary;
+  }
+
+  .mat-column-meaning {
+    width: 40%;
+  }
+
+  th.mat-header-cell {
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  td.mat-cell {
+    padding: $spacing-sm 0;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .example-table {
+    .mat-column-japanese,
+    .mat-column-reading,
+    .mat-column-meaning {
+      width: auto;
+    }
+  }
+}

@@ -11,6 +11,7 @@
   "lesson_completed": false,
   "content": [
     {
+      "id": "lesson2section1",
       "section_title": "Single Digit Numbers (0-9)",
       "section_description": "Basic numbers from 0 to 9, including alternatives and irregularities.",
       "section_completed": false,
@@ -101,6 +102,7 @@
       }
     },
     {
+      "id": "lesson2section2",
       "section_title": "Teens (10-19)",
       "section_description": "Numbers from 10 to 19, showing the 十 + number pattern.",
       "section_completed": false,
@@ -168,6 +170,7 @@
       ]
     },
     {
+      "id": "lesson2section3",
       "section_title": "Multiples of 10 (20-90)",
       "section_description": "Multiples of 10, showing the number + 十 pattern.",
       "section_completed": false,
@@ -223,6 +226,7 @@
       ]
     },
     {
+      "id": "lesson2section4",
       "section_title": "Hundreds and Irregulars",
       "section_description": "Hundreds with irregular readings highlighted.",
       "section_completed": false,
@@ -254,6 +258,7 @@
       ]
     },
     {
+      "id": "lesson2section5",
       "section_title": "Thousands and Irregulars",
       "section_description": "Thousands with irregular readings highlighted.",
       "section_completed": false,

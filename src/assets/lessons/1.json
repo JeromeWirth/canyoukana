@@ -10,6 +10,7 @@
   "lesson_completed": false,
   "content": [
     {
+      "id": "lesson1section1",
       "section_title": "First Meeting Phrases",
       "section_description": "",
       "section_completed": false,
@@ -35,6 +36,7 @@
       ]
     },
     {
+      "id": "lesson1section2",
       "section_title": "Daily greetings",
       "section_description": "",
       "section_completed": false,
@@ -90,6 +92,7 @@
       ]
     },
     {
+      "id": "lesson1section3",
       "section_title": "Leaving and returning home",
       "section_description": "",
       "section_completed": false,

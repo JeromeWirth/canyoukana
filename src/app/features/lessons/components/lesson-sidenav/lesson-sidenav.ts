@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
-import { LessonStore } from '../../../state/lesson.state';
+import { LessonStore } from '../../../../state/lesson.state';
 
 @Component({
   selector: 'app-lesson-sidenav',

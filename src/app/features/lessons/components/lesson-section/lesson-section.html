@@ -1,0 +1,26 @@
+<mat-card class="section-card">
+  <mat-card-header>
+    <mat-card-title>{{ section.section_title }}</mat-card-title>
+    @if (isSectionCompleted(section.id)) {
+    <mat-icon color="primary">check_circle</mat-icon>
+    }
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{ section.section_title }}</p>
+
+    @if (section.examples) {
+    <app-example-table [examples]="section.examples" />
+    }
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button
+      mat-button
+      color="primary"
+      (click)="toggleSectionComplete(section.id)"
+    >
+      {{ isSectionCompleted(section.id) ? "Mark Incomplete" : "Mark Complete" }}
+    </button>
+  </mat-card-actions>
+</mat-card>

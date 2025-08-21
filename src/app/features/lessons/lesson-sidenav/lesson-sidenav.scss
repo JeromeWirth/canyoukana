@@ -1,0 +1,30 @@
+.lesson-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lesson-title {
+  font-weight: 500;
+}
+
+.lesson-difficulty {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  align-self: flex-start;
+
+  &.beginner {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  &.intermediate {
+    background-color: #fff3e0;
+    color: #ef6c00;
+  }
+}
+
+.active-lesson {
+  background: rgba(0, 0, 0, 0.04);
+}

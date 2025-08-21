@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: $z-index-sticky;
-  height: 32px; // Increased height for better visibility
+  height: 32px; // Changed from 32px to match the navbar height
 }
 
 .navbar {
@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   padding: $spacing-md $spacing-lg;
-  height: 100%;
+  height: 32px;
   background-color: rgba($background-secondary, 0.95);
   border-bottom: 1px solid $neutral-300;
   box-shadow: 0 2px 8px rgba($neutral-50, 0.2);

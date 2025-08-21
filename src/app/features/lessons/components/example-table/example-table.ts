@@ -20,4 +20,6 @@ export class ExampleTable {
     cells.forEach((cell) => cell.setAttribute('data-label', '漢字'));
     // Repeat for other columns...
   }
+
+  openPractice(): void {}
 }

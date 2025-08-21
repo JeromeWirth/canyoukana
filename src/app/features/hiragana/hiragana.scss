@@ -1,0 +1,122 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.container {
+  @include responsive-container;
+  padding: $spacing-xl $spacing-md;
+  margin-top: 64px;
+
+  h2 {
+    @include heading-1;
+    background: linear-gradient(135deg, $primary-light, $primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+  }
+}
+
+.hiragana-table {
+  @include glass-morphism;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  margin-bottom: $spacing-xl;
+  border-radius: $card-radius-lg;
+  padding: $spacing-md;
+  background-color: $background-elevated;
+
+  td {
+    @include smooth-transition;
+    width: calc(100% / 5);
+    aspect-ratio: 1;
+    text-align: center;
+    font-size: $font-size-2xl;
+    background-color: rgba($neutral-200, 0.3);
+    border-radius: $card-radius-sm;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid $neutral-300;
+
+    &:hover {
+      background-color: rgba($primary, 0.1);
+      border-color: rgba($primary, 0.3);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &.selected {
+      background-color: rgba($primary, 0.2);
+      border-color: $primary;
+      color: $primary-light;
+    }
+
+    &:empty {
+      background-color: transparent;
+      border-color: transparent;
+      cursor: default;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+.details {
+  @include glass-morphism;
+  background-color: $background-elevated;
+  border: 1px solid $neutral-300;
+  border-radius: $card-radius-lg;
+  padding: $spacing-lg;
+  margin-top: $spacing-xl;
+
+  h3 {
+    color: $primary-light;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+  }
+
+  h4 {
+    color: $text-primary;
+    font-size: $font-size-lg;
+    margin: $spacing-md 0;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .container {
+    padding: $spacing-md $spacing-sm;
+  }
+
+  .hiragana-table {
+    padding: $spacing-sm;
+    border-spacing: 2px;
+
+    td {
+      font-size: $font-size-xl;
+    }
+  }
+
+  .details {
+    padding: $spacing-md;
+
+    h3 {
+      font-size: $font-size-lg;
+    }
+  }
+}

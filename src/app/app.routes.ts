@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Lesson } from './features/lessons/lesson/lesson';
-import { Hiragana } from './features/kana/hiragana/hiragana';
 import { Practice } from './features/practice/practice/practice';
+import { Hiragana } from './features/hiragana/hiragana';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'lessons', pathMatch: 'full' },
@@ -17,7 +17,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'kana',
+    path: 'hiragana',
     component: Hiragana,
   },
 

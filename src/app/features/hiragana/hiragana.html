@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Hiragana Table</h2>
+  <table class="hiragana-table">
+    @for (row of hiraganaTable; track $index) {
+    <tr>
+      @for (kana of row; track kana) {
+      <td
+        (click)="selectKana(kana)"
+        [class.selected]="selectedKana() === kana"
+        role="button"
+        tabindex="0"
+      >
+        {{ kana || "" }}
+      </td>
+      }
+    </tr>
+    }
+  </table>
+
+  @if (selectedKana()) {
+  <div class="details">
+    <h3>Details for {{ selectedKana() }}</h3>
+    <p>Romaji: {{ romaji() }}</p>
+    @if (details$() | async; as details) { @if (isError(details)) {
+    <p>{{ details.error }}</p>
+    } @else {
+    <h4>Vocabulary Examples:</h4>
+    @for (example of details.vocabularyExamples; track $index) {
+    <p>{{ example.japanese }} ({{ example.romaji }}) - {{ example.english }}</p>
+    } @empty {
+    <p>No examples found.</p>
+    } } } @else {
+    <p>Loading details...</p>
+    }
+  </div>
+  }
+</div>

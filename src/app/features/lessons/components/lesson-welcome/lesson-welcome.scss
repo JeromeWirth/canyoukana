@@ -4,6 +4,8 @@
 .welcome-container {
   @include responsive-container;
   padding: $spacing-xl $spacing-md;
+  min-height: calc(100vh - 64px); // Add this line to account for header
+  margin-top: 64px; // Add this to prevent content from hiding under header
 }
 
 .welcome-header {
@@ -12,8 +14,13 @@
 
   h1 {
     @include heading-1;
-    @include gradient-text;
+    background: linear-gradient(135deg, $primary-light, $primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-bottom: $spacing-md;
+    font-size: 3.5rem;
+    text-shadow: 0 0 30px rgba($primary, 0.3);
   }
 
   .subtitle {
@@ -32,6 +39,8 @@
   .feature-card {
     @include glass-morphism;
     @include smooth-transition;
+    background-color: $background-elevated;
+    border: 1px solid $neutral-300;
     border-radius: $card-radius-lg;
     padding: $spacing-lg;
     height: 100%;
@@ -39,6 +48,7 @@
     &:hover {
       transform: translateY(-4px);
       box-shadow: $card-shadow-lg;
+      border-color: rgba($primary, 0.3);
     }
 
     mat-card-header {
@@ -49,6 +59,7 @@
         height: 2rem;
         width: 2rem;
         margin-right: $spacing-md;
+        color: $primary-light;
       }
 
       mat-card-title {
@@ -73,12 +84,17 @@
 
   mat-card {
     @include glass-morphism;
+    background-color: rgba($primary, 0.05);
+    border: 1px solid rgba($primary, 0.2);
     border-radius: $card-radius-lg;
     padding: $spacing-xl;
     text-align: center;
 
     h2 {
-      @include gradient-text;
+      background: linear-gradient(135deg, $primary-light, $primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       font-size: $font-size-2xl;
       font-weight: $font-weight-bold;
       margin-bottom: $spacing-md;
@@ -92,7 +108,7 @@
       &.tip {
         font-style: italic;
         font-size: $font-size-sm;
-        color: $primary;
+        color: $primary-light;
         margin: $spacing-md 0;
       }
     }
@@ -101,6 +117,13 @@
       @include modern-button;
       padding: $spacing-md $spacing-xl;
       font-size: $font-size-lg;
+      background-color: $primary;
+      color: $neutral-900;
+      border: none;
+
+      &:hover {
+        background-color: $primary-light;
+      }
     }
   }
 }

@@ -1,1 +1,25 @@
-<p>practice works!</p>
+<div class="practice-container">
+  <h2>Practice Modules</h2>
+  <div class="practice-grid">
+    <div class="practice-card" (click)="openPractice('hiragana')">
+      <span class="emoji">あ</span>
+      <h3>Hiragana</h3>
+      <p>Practice reading and writing hiragana.</p>
+    </div>
+    <div class="practice-card" (click)="openPractice('katakana')">
+      <span class="emoji">カ</span>
+      <h3>Katakana</h3>
+      <p>Practice reading and writing katakana.</p>
+    </div>
+    <div class="practice-card" (click)="openPractice('vocabulary')">
+      <span class="emoji">🗣️</span>
+      <h3>Vocabulary</h3>
+      <p>Test your Japanese vocabulary knowledge.</p>
+    </div>
+    <div class="practice-card" (click)="openPractice('numbers')">
+      <span class="emoji">🔢</span>
+      <h3>Numbers</h3>
+      <p>Learn and practice Japanese numbers.</p>
+    </div>
+  </div>
+</div>

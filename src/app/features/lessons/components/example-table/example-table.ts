@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { Example } from '../../../../models';
+import { PracticeModal } from '../../../practice/practice-modal/practice-modal';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-example-table',
@@ -12,6 +14,7 @@ import { Example } from '../../../../models';
 export class ExampleTable {
   @Input({ required: true }) examples: Example[] = [];
 
+  readonly dialog = inject(MatDialog);
   displayedColumns: string[] = ['kanji', 'kana', 'romaji', 'english'];
 
   ngAfterViewInit() {
@@ -20,6 +23,4 @@ export class ExampleTable {
     cells.forEach((cell) => cell.setAttribute('data-label', '漢字'));
     // Repeat for other columns...
   }
-
-  openPractice(): void {}
 }

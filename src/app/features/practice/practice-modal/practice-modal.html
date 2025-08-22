@@ -1,0 +1,62 @@
+<h2 mat-dialog-title>Practice Examples</h2>
+<mat-dialog-content>
+  @if (isQuizActive()) {
+  <mat-progress-bar
+    mode="determinate"
+    [value]="progress()"
+    color="primary"
+  ></mat-progress-bar>
+  <div class="score">Correct: {{ correctCount() }} / {{ currentIndex() }}</div>
+  <p class="question">{{ currentQuestion().questionText }}</p>
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Enter your answer</mat-label>
+      <input
+        matInput
+        formControlName="answer"
+        [disabled]="feedback() !== null"
+      />
+    </mat-form-field>
+  </form>
+  @if (feedback() === null) {
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="submitAnswer()"
+    [disabled]="form.invalid"
+  >
+    Submit
+  </button>
+  } @else {
+  <div
+    [class.correct]="feedback() === 'correct'"
+    [class.incorrect]="feedback() === 'incorrect'"
+  >
+    @if (feedback() === 'correct') {
+    <mat-icon>check_circle</mat-icon> Correct! } @else {
+    <mat-icon>cancel</mat-icon> Incorrect. Correct answer:
+    {{ currentQuestion().expectedAnswer }}
+    }
+  </div>
+  <button mat-raised-button color="primary" (click)="nextQuestion()">
+    Next
+  </button>
+  } } @else {
+  <div class="results">
+    <h3>Your Results</h3>
+    <p>Score: {{ correctCount() }} / {{ total() }} ({{ percentage() }}%)</p>
+    <div class="rating">
+      @for (star of [1,2,3,4,5]; track star) {
+      <mat-icon [class.filled]="star <= rating()">{{
+        star <= rating() ? "star" : "star_outline"
+      }}</mat-icon>
+      }
+    </div>
+  </div>
+  }
+</mat-dialog-content>
+@if (!isQuizActive()) {
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Close</button>
+</mat-dialog-actions>
+}
